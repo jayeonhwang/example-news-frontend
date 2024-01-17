@@ -6,7 +6,7 @@ export function Content() {
   const [articles, setArticles] = useState([])
   const getNews = () => {
     console.log('getnews')
-    axios.get(`https://newsapi.org/v2/everything?q=vaseline&apiKey=${import.meta.env.VITE_API_KEY}`).then(response => {
+    axios.get(`http://localhost:3000/articles.json`).then(response => {
       console.log(response.data)
       setArticles(response.data.articles)
     })
